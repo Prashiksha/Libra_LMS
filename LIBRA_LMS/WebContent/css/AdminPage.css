@@ -1,0 +1,818 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins' , sans-serif;
+}
+
+body {
+  background-color: #f7ec8d;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+  color: #2e1d02;
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 2px;
+}
+
+header nav ul li a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+}
+
+header nav ul li a:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header nav ul li a:hover {
+  background: rgba(163, 120, 51, 0.8);
+}
+
+header nav ul li .nav-active {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header .clearfix {
+  clear: both;
+}
+
+.home {
+  display: block;
+  margin: 60px;
+  padding: 10px;
+  float: left;
+  color: #2e1d02;
+  text-shadow: 1px 1px #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.home h1 {
+  font-size: 50px;
+}
+
+.addBook {
+  display: none;
+  margin-top: 20px;
+  padding-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.addBook input {
+  height: 40px;
+  width: 500px;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.addBook select {
+  height: 40px;
+  width: 500px;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  color: grey;
+}
+
+.addBook select option {
+  color: black;
+}
+
+.addBook label {
+  font-size: 13px;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 5px;
+  visibility: hidden;
+}
+
+.addBook .button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: #fff;
+}
+
+.addBook .button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.searchBook {
+  display: none;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.searchBook .searchBar {
+  margin: 20px auto;
+  padding: 10px;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.searchBook .searchBar #searchBook {
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.searchBook .searchBar #searchBook option {
+  width: 100px;
+}
+
+.searchBook .searchBar input {
+  height: 40px;
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.searchBook .searchBar .button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: #fff;
+}
+
+.searchBook .searchBar .button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.searchBook .searchTable {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.searchBook .searchTable table {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-collapse: collapse;
+  width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.searchBook .searchTable td, .searchBook .searchTable th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  height: 20px;
+  width: 30%;
+}
+
+.searchBook .searchTable tr:nth-child(even) {
+  background-color: rgba(163, 120, 51, 0.4);
+}
+
+.searchBook .searchTable a {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.searchBook .searchTable a:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.searchBook .searchTable .deleteicon {
+  width: 20px;
+  height: 20px;
+}
+
+
+/*LOGOUT BUTTON*/
+.nav .logout_button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: #fff;
+}
+
+.nav .logout_button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+
+
+#popup-update {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#popup-update .popup-content {
+  height: 500px;
+  width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+#popup-update .popup-content .close {
+  float: right;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#popup-update .popup-content .close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#popup-update .popup-content .info {
+  display: block;
+  visibility: visible;
+  float: left;
+  color: black;
+  height: 40px;
+  width: 150px;
+  margin: 10px auto;
+  padding: 4px;
+}
+
+#popup-update .popup-content input {
+  height: 40px;
+  width: 250px;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+#popup-update .popup-content label {
+  font-size: 13px;
+  color: red;
+  visibility: hidden;
+}
+
+#popup-update .popup-content .button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: white;
+}
+
+#popup-update .popup-content .button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#popup-delete {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#popup-delete .popup-content {
+  height: 500px;
+  width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+#popup-delete .popup-content .close {
+  float: right;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#popup-delete .popup-content .close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#popup-delete .popup-content .info {
+  display: block;
+  visibility: visible;
+  float: left;
+  color: black;
+  height: 40px;
+  width: 150px;
+  margin: 10px auto;
+  padding: 4px;
+}
+
+#popup-delete .popup-content input {
+  height: 40px;
+  width: 250px;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+#popup-delete .popup-content label {
+  font-size: 13px;
+  color: red;
+  visibility: hidden;
+}
+
+#popup-delete .popup-content .button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: white;
+}
+
+#popup-delete .popup-content .button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.viewOrder {
+  display: none;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.viewOrder .viewOrderBar {
+  margin: 20px auto;
+  padding: 10px;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.viewOrder .viewOrderBar #viewOrderSearch {
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.viewOrder .viewOrderBar #viewOrderSearch option {
+  width: 100px;
+}
+
+.viewOrder .viewOrderBar input {
+  height: 40px;
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.viewOrder .viewOrderBar .button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: #fff;
+}
+
+.viewOrder .viewOrderBar .button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.viewOrder .viewOrderTable {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.viewOrder .viewOrderTable table {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-collapse: collapse;
+  width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.viewOrder .viewOrderTable td, .viewOrder .viewOrderTable th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  height: 20px;
+  width: 30%;
+}
+
+.viewOrder .viewOrderTable tr:nth-child(even) {
+  background-color: rgba(163, 120, 51, 0.4);
+}
+
+#popup-changepass {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#popup-changepass .popup-content {
+  height: 500px;
+  width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+#popup-changepass .popup-content .close {
+  float: right;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#popup-changepass .popup-content .close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#popup-changepass .popup-content .info {
+  display: block;
+  visibility: visible;
+  float: left;
+  color: black;
+  height: 40px;
+  width: 150px;
+  margin: 10px auto;
+  padding: 4px;
+}
+
+#popup-changepass .popup-content input {
+  height: 40px;
+  width: 250px;
+  margin: 10px auto;
+  display: block;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+#popup-changepass .popup-content label {
+  font-size: 13px;
+  color: red;
+  visibility: hidden;
+}
+
+#popup-changepass .popup-content .button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #262626;
+  border-radius: 4px;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bolder;
+  font-size: 18px;
+  background: white;
+}
+
+#popup-changepass .popup-content .button:hover {
+  background: #a37833;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#popup-changepass .popup-content {
+  width: 500px;
+  height: 400px;
+}
+
+@media (max-width: 1200px) {
+  header {
+    margin: 20px;
+  }
+  .home {
+    margin: 20px;
+  }
+  .addBook {
+    margin: 20px;
+  }
+  .searchBook {
+    margin: 20px;
+  }
+  .viewOrder {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 1096px) {
+  .menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #ccc;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #2e1d02;
+  }
+  .menu-toggle::before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+  .menu-toggle-active {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #ccc;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #2e1d02;
+  }
+  .menu-toggle-active::before {
+    content: '\f00d';
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+  .nav {
+    display: none;
+  }
+  .nav-active {
+    display: block;
+    width: 100%;
+  }
+  .nav-active ul {
+    display: block;
+  }
+}
+
+@media (max-width: 976px) {
+  .home h1 {
+    font-size: 36px;
+  }
+  .addBook input {
+    width: 70%;
+  }
+  .addBook select {
+    width: 70%;
+  }
+  .searchBook .searchBar {
+    width: 60%;
+  }
+  .searchBook .searchBar input {
+    width: 80%;
+  }
+  .searchBook .searchTable table {
+    width: 100%;
+  }
+  .viewOrder .viewOrderBar {
+    width: 60%;
+  }
+  .viewOrder .viewOrderBar input {
+    width: 80%;
+  }
+  .viewOrder .viewOrderTable table {
+    width: 100%;
+  }
+  #popup-update #popup-content-update {
+    width: 80%;
+    margin: 0;
+  }
+  #popup-update #popup-content-update input {
+    width: 60%;
+  }
+  #popup-update #popup-content-update .info {
+    display: none;
+  }
+  #popup-update #popup-content-update label {
+    font-size: 10px;
+  }
+  #popup-changepass #popup-content-changepass {
+    width: 80%;
+    margin: 0;
+  }
+  #popup-changepass #popup-content-changepass input {
+    width: 60%;
+  }
+  #popup-changepass #popup-content-changepass .info {
+    display: none;
+  }
+  #popup-changepass #popup-content-changepass label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  #popup-update #popup-content-update input {
+    width: 80%;
+  }
+  #popup-changepass #popup-content-changepass input {
+    width: 80%;
+  }
+  .addBook input {
+    width: 90%;
+  }
+  .addBook select {
+    width: 90%;
+  }
+  .searchBook .searchBar {
+    width: 100%;
+  }
+  .searchBook .searchBar input {
+    width: 100%;
+  }
+  .searchBook .searchTable table {
+    font-size: 13px;
+  }
+  .viewOrder .viewOrderBar {
+    width: 100%;
+  }
+  .viewOrder .viewOrderBar input {
+    width: 100%;
+  }
+  .viewOrder .viewOrderTable table {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=AdminPage.css.map */

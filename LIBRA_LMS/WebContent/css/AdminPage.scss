@@ -1,0 +1,735 @@
+@mixin menu(){
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #ccc;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #2e1d02;
+}
+
+@mixin btn(){
+    // display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+    border-radius: 4px;
+
+    &:hover{
+        background :rgb(163, 120, 51);
+        color: #fff;
+        transition: 0.4s;
+    }
+}
+
+@mixin popup(){
+    background: rgba(0,0,0,0.6);
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .popup-content{
+        height: 500px;
+        width: 500px;
+        background: white;
+        padding: 20px;
+        border-radius: 4px;
+        position: relative;
+        
+
+        .close{
+            float: right;
+            height: 25px;
+            width: 25px;
+            // position: absolute;
+            cursor: pointer;
+            border-radius: 50%;
+
+            &:hover{
+                background: rgba(0,0,0,0.1);
+            }
+        }
+
+        .info{
+            display: block;
+            visibility: visible;
+            float: left;
+            color: black;
+            height: 40px;
+            width: 150px;
+            margin: 10px auto;
+            padding: 4px;
+        }
+
+        input{
+            height: 40px;
+            width: 250px;
+            margin: 10px auto;
+            display: block;
+            padding: 4px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            // float: right;
+            //margin-bottom: 40px;
+        }
+
+        label{
+            font-size: 13px;
+            color: red;
+            visibility: hidden;
+        }
+
+        .button{
+            @include btn();
+            padding: 5px 10px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-weight: bolder;
+            font-size: 18px;
+            background: white;
+        }
+    }
+}
+
+@mixin tbl(){
+    box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+        table {
+            background-color: rgba(255,255,255,0.8);
+            border-collapse: collapse;
+            width: 900px;
+            margin: 20px auto;
+            padding: 10px;
+
+          }
+          
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            height: 20px;
+            width: 30%;
+          }
+          
+          tr:nth-child(even) {
+            background-color: rgba(163, 120, 51,0.4);
+          }
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    background-color: #f7ec8d;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    .logo{
+        color: #2e1d02;
+        height: 60px;
+        font-size: 36px;
+        line-height: 60px;
+        padding: 0 20px;
+        // background: #ccc;
+        text-align: center;
+        box-sizing: border-box;
+        float: left;
+        font-weight: 800;
+        text-decoration: none;
+    }
+
+    nav{
+        float: right;
+
+        ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            li{
+                list-style: none;
+                margin: 2px;
+
+                a{
+                    display: block;
+                    @include btn();
+
+                    &:hover{
+                        background: rgba(163, 120, 51, 0.8);
+                    }
+                }
+
+                .nav-active{
+                    background:rgb(163, 120, 51);
+                    color: #fff;
+                    transition: 0.4s;
+                }
+            }
+
+            // .more{
+            //     #nav-more-content{
+            //         display: none;
+            //         position: absolute;
+            //         background-color: rgba(255,255,255,0.8);
+            //         min-width: 160px;
+            //         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            //         z-index: 1;
+            //         box-sizing: border-box;
+            //         border-radius: 4px;
+
+            //         a{
+            //             float: none;
+            //             color: black;
+            //             padding: 12px 16px;
+            //             text-decoration: none;
+            //             display: block;
+            //             text-align: left;
+            //             border-radius: 4px;
+
+            //             &:hover{
+            //                 background :rgba(163, 120, 51, 0.8);
+            //                 color: #fff;
+            //                 transition: 0.4s;
+            //             }
+            //         }
+            //     }
+
+            //     &:hover #nav-more-content {
+            //         display: block;
+            //     }
+
+            // }
+        }
+    }
+
+    .clearfix{
+        clear: both;
+    }
+
+}
+
+.home{
+    display: block;
+    margin: 60px;
+    padding: 10px;
+    float: left;
+    color: #2e1d02;
+    text-shadow: 1px 1px #fff;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+    
+    h1{
+        font-size: 50px;
+    }
+}
+
+.addBook{
+    display: none;
+    margin-top: 20px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    input{
+        height: 40px;
+        width: 500px;
+        margin: 10px auto;
+        display: block;
+        padding: 4px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        //margin-bottom: 40px;
+    }
+
+    select{
+        height: 40px;
+        width: 500px;
+        margin: 10px auto;
+        display: block;
+        padding: 4px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        color: grey;
+
+        option{
+            color: black;
+        }
+
+    }
+
+    label{
+        font-size: 13px;
+        color: red;
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 10px;
+        padding: 5px;
+        visibility: hidden;
+    }
+
+    .button{
+        @include btn();
+        font-weight: bolder;
+        font-size: 18px;
+        background: #fff;
+    }
+}
+
+.searchBook{
+    display: none;
+    
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .searchBar{
+        margin: 20px auto;
+        padding: 10px;
+        width: 450px;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        box-sizing: border-box;
+
+        #searchBook{
+            margin-left: 20px;
+            padding: 5px;
+            border-radius: 4px;
+
+            option{
+                width: 100px;
+            }
+        }
+
+        input{
+            height: 40px;
+            width: 80%;
+            margin: 10px auto;
+            display: block;
+            padding: 4px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            //margin-bottom: 40px;
+        }
+
+        .button{
+            @include btn();
+            padding: 5px 10px;
+            font-weight: bolder;
+            font-size: 18px;
+            background: #fff;
+        }
+
+        
+    }
+
+    .searchTable{
+        @include tbl();
+
+          a{
+                @include btn();
+                padding: 5px 10px;
+                font-weight: bolder;
+                text-decoration: none;
+
+          }
+        
+          .deleteicon{
+              width: 20px;
+              height: 20px;
+          }
+    }
+        
+}
+
+#popup-update{
+    @include popup();
+}
+
+#popup-delete{
+	@include popup();
+}
+
+
+.viewOrder{
+    display: none;
+    
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .viewOrderBar{
+        margin: 20px auto;
+        padding: 10px;
+        width: 450px;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        box-sizing: border-box;
+
+        #viewOrderSearch{
+            margin-left: 20px;
+            padding: 5px;
+            border-radius: 4px;
+
+            option{
+                width: 100px;
+            }
+        }
+
+        input{
+            height: 40px;
+            width: 80%;
+            margin: 10px auto;
+            display: block;
+            padding: 4px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            //margin-bottom: 40px;
+        }
+
+        .button{
+            @include btn();
+            padding: 5px 10px;
+            font-weight: bolder;
+            font-size: 18px;
+            background: #fff;
+        }
+
+        
+    }
+
+    .viewOrderTable{
+        @include tbl();
+    }
+
+}
+
+// .addGenre{
+//     display: none;
+    
+//     position: relative;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+
+//     .addGenreBar{
+//         margin: 20px auto;
+//         padding: 10px;
+//         width: 450px;
+//         background-color: rgba(255,255,255,0.7);
+//         border-radius: 4px;
+//         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+//         box-sizing: border-box;
+
+//         input{
+//             height: 40px;
+//             width: 80%;
+//             margin: 10px auto;
+//             display: block;
+//             padding: 4px;
+//             border: 1px solid gray;
+//             border-radius: 4px;
+//             //margin-bottom: 40px;
+//         }
+
+//         .button{
+//             @include btn();
+//             padding: 5px 10px;
+//             font-weight: bolder;
+//             font-size: 18px;
+//             background: #fff;
+//         }
+
+        
+//     }
+//     .addGenreTable{
+//         box-sizing: border-box;
+//         border-radius: 4px;
+//         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+//         table {
+//             background-color: rgba(255,255,255,0.8);
+//             border-collapse: collapse;
+//             width: 900px;
+//             margin: 20px auto;
+//             padding: 10px;
+
+//           }
+          
+//           td, th {
+//             border: 1px solid #dddddd;
+//             text-align: left;
+//             padding: 8px;
+//             height: 20px;
+//             width: 30%;
+//           }
+          
+//           tr:nth-child(even) {
+//             background-color: rgba(163, 120, 51,0.4);
+//           }
+
+//           a{
+//                 @include btn();
+//                 padding: 5px 10px;
+//                 width: 100%;
+//                 height: 100%;
+//                 font-weight: bolder;
+//           }
+        
+//           .deleteicon{
+//               font-size: 22px;
+//           }
+//     }
+// }
+
+#popup-changepass{
+    @include popup();
+    .popup-content{
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media (max-width:1200px){
+    header{
+        margin: 20px;
+    }
+
+    .home{
+        margin: 20px;
+    }
+
+    .addBook{
+        margin: 20px;
+    }
+
+    .searchBook{
+        margin: 20px;
+    }
+
+    .viewOrder{
+        margin: 20px;
+    }
+
+}
+
+@media (max-width: 1096px){
+    .menu-toggle{
+        @include menu();
+
+        &::before{
+            content: '\f0c9';
+            font-family: fontAwesome;
+            line-height: 40px;
+        }
+
+    }
+
+    .menu-toggle-active{
+        @include menu();
+
+        &::before{
+            content: '\f00d';
+            font-family: fontAwesome;
+            line-height: 40px;
+        }
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .nav-active{
+        display: block;
+        width: 100%;
+
+        ul{
+            display: block;
+        }
+    }
+
+}
+
+@media (max-width:976px){
+
+    .home{
+        h1{
+            font-size: 36px;
+        }
+    }
+
+    .addBook{
+        input{
+            width: 70%;
+        }
+        select{
+            width: 70%;
+        }
+    }
+
+    .searchBook{
+        .searchBar{
+            width: 60%;
+        
+            input{
+                width: 80%;
+            }
+        }
+
+        .searchTable{
+            table{
+                width: 100%;
+            }
+        }
+    }
+
+    .viewOrder{
+        .viewOrderBar{
+            width: 60%;
+        
+            input{
+                width: 80%;
+            }
+        }
+
+        .viewOrderTable{
+            table{
+                width: 100%;
+            }
+        }
+    }
+
+    #popup-update{
+        #popup-content-update{
+            width: 80%;
+            margin: 0;
+
+            input{
+                width: 60%;
+            }
+
+            .info{
+                display: none;
+            }
+
+            label{
+                font-size: 10px;
+            }
+        }
+    }
+
+    #popup-changepass{
+        #popup-content-changepass{
+            width: 80%;
+            margin: 0;
+
+            input{
+                width: 60%;
+            }
+
+            .info{
+                display: none;
+            }
+
+            label{
+                font-size: 10px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width:600px){
+    #popup-update{
+        #popup-content-update{
+            input{
+                width: 80%;
+            }
+        }
+    }
+
+    #popup-changepass{
+        #popup-content-changepass{
+            input{
+                width: 80%;
+            }
+        }
+    }
+
+    .addBook{
+        input{
+            width: 90%;
+        }
+        select{
+            width: 90%;
+        }
+    }
+
+    .searchBook{
+        .searchBar{
+            width: 100%;
+        
+            input{
+                width: 100%;
+            }
+        }
+
+        .searchTable{
+            table{
+                font-size: 13px;
+            }
+        }
+
+    }
+
+    .viewOrder{
+        .viewOrderBar{
+            width: 100%;
+        
+            input{
+                width: 100%;
+            }
+        }
+        .viewOrderTable{
+            table{
+                font-size: 13px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>Libra</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>InsertBookServlet</servlet-name>
+		<servlet-class>com.lms.servlet.InsertBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertBookServlet</servlet-name>
+		<url-pattern>/InsertBookServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>com.lms.servlet.AdminLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/AdminLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>AdminLogoutServlet</servlet-name>
+		<servlet-class>com.lms.servlet.AdminLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLogoutServlet</servlet-name>
+		<url-pattern>/AdminLogoutServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MemberLoginServlet</servlet-name>
+		<servlet-class>com.lms.servlet.MemberLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberLoginServlet</servlet-name>
+		<url-pattern>/MemberLoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MemberRegisterServlet</servlet-name>
+		<servlet-class>com.lms.servlet.MemberRegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberRegisterServlet</servlet-name>
+		<url-pattern>/MemberRegisterServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminChangePassServlet</servlet-name>
+		<servlet-class>com.lms.servlet.AdminChangePassServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminChangePassServlet</servlet-name>
+		<url-pattern>/AdminChangePassServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SearchBookServlet</servlet-name>
+		<servlet-class>com.lms.servlet.SearchBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchBookServlet</servlet-name>
+		<url-pattern>/SearchBookServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewSearchBook</servlet-name>
+		<servlet-class>com.lms.servlet.ViewSearchBook</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewSearchBook</servlet-name>
+		<url-pattern>/ViewSearchBook</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewOrderServlet</servlet-name>
+		<servlet-class>com.lms.servlet.ViewOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewOrderServlet</servlet-name>
+		<url-pattern>/ViewOrderServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SearchBookMemberServlet</servlet-name>
+		<servlet-class>com.lms.servlet.SearchBookMemberServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchBookMemberServlet</servlet-name>
+		<url-pattern>/SearchBookMemberServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MemberProfileServlet</servlet-name>
+		<servlet-class>com.lms.servlet.MemberProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberProfileServlet</servlet-name>
+		<url-pattern>/MemberProfileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MemberChangePassServlet</servlet-name>
+		<servlet-class>com.lms.servlet.MemberChangePassServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberChangePassServlet</servlet-name>
+		<url-pattern>/MemberChangePassServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateBookServlet</servlet-name>
+		<servlet-class>com.lms.servlet.UpdateBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateBookServlet</servlet-name>
+		<url-pattern>/UpdateBookServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MemberInfoServlet</servlet-name>
+		<servlet-class>com.lms.servlet.MemberInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberInfoServlet</servlet-name>
+		<url-pattern>/MemberInfoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminDeleteBook</servlet-name>
+		<servlet-class>com.lms.servlet.AdminDeleteBook</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminDeleteBook</servlet-name>
+		<url-pattern>/AdminDeleteBook</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>IssueBookServlet</servlet-name>
+		<servlet-class>com.lms.servlet.IssueBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IssueBookServlet</servlet-name>
+		<url-pattern>/IssueBookServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewIssuedBooksServlet</servlet-name>
+		<servlet-class>com.lms.servlet.ViewIssuedBooksServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewIssuedBooksServlet</servlet-name>
+		<url-pattern>/ViewIssuedBooksServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ReturnBookServlet</servlet-name>
+		<servlet-class>com.lms.servlet.ReturnBookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReturnBookServlet</servlet-name>
+		<url-pattern>/ReturnBookServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+</web-app>
+</element>
